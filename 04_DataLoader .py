@@ -12,7 +12,7 @@ import math
 
 class WineDataset(Dataset):
     def __init__(self):
-        data = np.loadtxt(r'L_PyTorch\wine.csv',delimiter=',',dtype=np.float32, skiprows=1)
+        data = np.loadtxt('.\wine.csv',delimiter=',',dtype=np.float32, skiprows=1)
         self.x = torch.from_numpy(data[:,1:])
         self.y = torch.from_numpy(data[:,[0]])
         self.n_samples = data.shape[0]
